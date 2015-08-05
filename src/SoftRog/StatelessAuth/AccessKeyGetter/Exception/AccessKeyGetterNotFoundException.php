@@ -2,7 +2,7 @@
 
 namespace SoftRog\StatelessAuth\AccessKeyGetter\Exception;
 
-class InvalidAccessKeyGetterException extends \Exception
+class AccessKeyGetterNotFoundException extends \Exception
 {
-
+  protected $message = "Access key getter not found.";
 }
