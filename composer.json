@@ -1,0 +1,16 @@
+{
+    "name": "softrog/stateless-auth",
+    "description": "Stateless authorization for REST apis.",
+    "authors": [
+        {
+            "name": "Roger Torrente",
+            "email": "roger.torrente@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "": "src/" }
+    },
+    "require": {
+        "mardy-git/hmac": "^2.3"
+    }
+}
