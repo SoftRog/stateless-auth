@@ -12,8 +12,12 @@ class Generator extends BaseAbstract
    * @return string|null
    * @throws \SoftRog\StatelessAuth\Exception\InvalidStatelessAuthCredentialsException
    */
-  public function generate($headers)
+  public function generate($headers, $id = null, $key = null)
   {
+    if (!is_null($id) && !is_null($key)) {
+      $this->configuration->add('id', $id);
+      $this->configuration->add('key', $key);
+    }
     if (!$this->configuration->has('id') || !$this->configuration->has('key')) {
       throw new \SoftRog\StatelessAuth\Exception\InvalidStatelessAuthCredentialsException();
     }
